@@ -1,0 +1,16 @@
+{
+  "scripts": {
+    "postinstall": "lefthook install",
+    "commit": "git add . && git-cz",
+    "lint": "biome check --apply --no-errors-on-unmatched --files-ignore-unknown=true src",
+    "build:all": "nx run-many --target=build --all",
+    "build:affected": "nx affected:build"
+  },
+  "devDependencies": {
+    "nx": "16.5.3",
+    "@biomejs/biome": "^1.6.3",
+    "git-cz": "^4.9.0",
+    "lefthook": "^1.6.7",
+    "semantic-release": "^23.0.6"
+  }
+}

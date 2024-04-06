@@ -1,0 +1,40 @@
+{
+  "name": "vite-plugin-biomejs",
+  "version": "0.0.2",
+  "description": "Biomejs plugin for Vite",
+  "type": "module",
+  "files": ["dist"],
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    "types": "./dist/index.d.ts",
+    "import": "./dist/index.js"
+  },
+  "scripts": {
+    "test": "vitest --ui",
+    "build": "vite build && tsc",
+    "login": "npm login --registry=https://registry.npmjs.org",
+    "publish": "npm publish --access=public --registry=https://registry.npmjs.org",
+    "unpublish": "npm unpublish --force --registry=https://registry.npmjs.org"
+  },
+  "peerDependencies": {
+    "@biomejs/biome": "^1.6.3"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@vitest/ui": "^1.4.0",
+    "typescript": "^5.1.6",
+    "vite": "^5.2.6",
+    "vite-plugin-inspect": "^0.8.3",
+    "vitest": "^1.4.0"
+  },
+  "dependencies": {
+    "@biomejs/js-api": "^0.5.0",
+    "@biomejs/wasm-nodejs": "^1.6.3"
+  },
+  "engines": {
+    "node": ">=20",
+    "pnpm": ">=8"
+  }
+}
