@@ -7,10 +7,13 @@
     "build:affected": "nx affected:build"
   },
   "devDependencies": {
-    "nx": "16.5.3",
-    "@biomejs/biome": "^1.6.3",
+    "@biomejs/biome": "^1.6.4",
     "git-cz": "^4.9.0",
-    "lefthook": "^1.6.7",
-    "semantic-release": "^23.0.6"
+    "lefthook": "^1.6.8",
+    "nx": "18.2.3",
+    "semantic-release": "^23.0.7",
+    "typescript": "^5.4.4",
+    "vite": "^5.2.8",
+    "vitest": "^1.4.0"
   }
 }
