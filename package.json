@@ -1,19 +1,23 @@
 {
   "scripts": {
     "postinstall": "lefthook install",
-    "commit": "git add . && git-cz",
-    "lint": "biome check --apply --no-errors-on-unmatched --files-ignore-unknown=true src",
+    "commit": "git add -A && git-cz",
+    "lint": "biome check --apply packages",
     "build:all": "nx run-many --target=build --all",
     "build:affected": "nx affected:build"
   },
   "devDependencies": {
-    "@biomejs/biome": "^1.6.4",
+    "@biomejs/biome": "^1.7.0",
     "git-cz": "^4.9.0",
-    "lefthook": "^1.6.8",
-    "nx": "18.2.3",
-    "semantic-release": "^23.0.7",
-    "typescript": "^5.4.4",
-    "vite": "^5.2.8",
-    "vitest": "^1.4.0"
+    "lefthook": "^1.6.10",
+    "nx": "18.3.3",
+    "semantic-release": "^23.0.8",
+    "typescript": "^5.4.5",
+    "vite": "^5.2.10",
+    "vitest": "^1.5.0"
+  },
+  "engines": {
+    "node": ">=20",
+    "pnpm": ">=9"
   }
 }

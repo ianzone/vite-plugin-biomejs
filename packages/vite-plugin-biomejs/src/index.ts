@@ -1,7 +1,7 @@
-import { Biome, Distribution } from '@biomejs/js-api';
+import { Biome, type Configuration, Distribution } from '@biomejs/js-api';
 import { type Plugin, normalizePath } from 'vite';
 
-export default function biomePlugin(): Plugin {
+export default function biomePlugin(config?: Configuration): Plugin {
   let biome: Biome | undefined;
   const shouldLint = (path: string) => path.match(/\/src\/[^?]*\.(vue|svelte|m?[jt]sx?)$/);
 
@@ -11,19 +11,28 @@ export default function biomePlugin(): Plugin {
       const path = normalizePath(id);
 
       if (shouldLint(path)) {
-        console.log('Linting', path);
+        // console.log('Linting', path);
+
         if (!biome) {
           biome = await Biome.create({
             distribution: Distribution.NODE,
           });
         }
 
+        try {
+          if (config) {
+            biome.applyConfiguration(config);
+          }
+        } catch (err) {
+          console.error(err);
+        }
+
         const formatted = biome.formatContent(code, {
-          filePath: id,
+          filePath: path,
         });
 
         const result = biome.lintContent(formatted.content, {
-          filePath: id,
+          filePath: path,
         });
 
         return result.content;

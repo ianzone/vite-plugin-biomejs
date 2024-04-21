@@ -1,0 +1,36 @@
+name: Release
+on:
+  push:
+    branches: [main]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [20]
+    steps:
+      - name: Checkout # 把分支拉出来
+        uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: "pnpm"
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Build
+        run: pnpm nx run vite-plugin-biomejs:build
+
+      - name: Release
+        run: pnpm semantic-release
+        env:
+          GITHUB_TOKEN: ${{ secrets.ACTION_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}

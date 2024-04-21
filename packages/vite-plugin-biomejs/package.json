@@ -3,9 +3,7 @@
   "version": "0.0.2",
   "description": "Biomejs plugin for Vite",
   "type": "module",
-  "files": [
-    "dist"
-  ],
+  "files": ["dist"],
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "exports": {
@@ -20,17 +18,13 @@
     "unpublish": "npm unpublish --force --registry=https://registry.npmjs.org"
   },
   "peerDependencies": {
-    "@biomejs/biome": "^1.6.3"
+    "@biomejs/biome": "^1.7.0"
   },
   "devDependencies": {
-    "vite-plugin-inspect": "^0.8.3"
+    "vite-plugin-inspect": "^0.8.4"
   },
   "dependencies": {
     "@biomejs/js-api": "^0.5.0",
-    "@biomejs/wasm-nodejs": "^1.6.4"
-  },
-  "engines": {
-    "node": ">=20",
-    "pnpm": ">=8"
+    "@biomejs/wasm-nodejs": "^1.7.0"
   }
 }
