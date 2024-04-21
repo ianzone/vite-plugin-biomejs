@@ -18,10 +18,7 @@
   "scripts": {
     "test": "vitest",
     "build": "vite build && tsc",
-    "release": "semantic-release",
-    "login": "npm login --registry=https://registry.npmjs.org",
-    "publish": "npm publish --access=public --registry=https://registry.npmjs.org",
-    "unpublish": "npm unpublish --force --registry=https://registry.npmjs.org"
+    "release": "semantic-release"
   },
   "peerDependencies": {
     "@biomejs/biome": "^1.7.0"

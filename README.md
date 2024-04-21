@@ -40,6 +40,12 @@ pnpm init
 
 ## Publish
 
+```
+    // "login": "npm login --registry=https://registry.npmjs.org",
+    // "publish": "npm publish --access=public --registry=https://registry.npmjs.org",
+    // "unpublish": "npm unpublish --force --registry=https://registry.npmjs.org"
+```
+
 # Reference
 
 [Tutorial: Getting Started with Package-Based Repos](https://www.youtube.com/watch?v=hzTMKuE3CDw)
