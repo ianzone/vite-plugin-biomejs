@@ -1,5 +1,6 @@
 {
   "name": "vite-plugin-biomejs",
+  "version": "0.1.0",
   "description": "Biomejs plugin for Vite",
   "type": "module",
   "repository": {
