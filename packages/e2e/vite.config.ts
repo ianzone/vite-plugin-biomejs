@@ -1,6 +1,13 @@
+import { resolve } from 'node:path';
+import react from '@vitejs/plugin-react-swc';
 import { defineConfig } from 'vite';
 import biomePlugin from 'vite-plugin-biomejs';
 
 export default defineConfig({
-  plugins: [biomePlugin()],
+  plugins: [react(), biomePlugin()],
+  resolve: {
+    alias: {
+      src: resolve(__dirname, 'src'),
+    },
+  },
 });
