@@ -21,13 +21,13 @@
     "release": "semantic-release"
   },
   "peerDependencies": {
-    "@biomejs/biome": "^1.7.0"
+    "@biomejs/biome": "^1.7.3"
   },
   "devDependencies": {
     "vite-plugin-inspect": "^0.8.4"
   },
   "dependencies": {
-    "@biomejs/js-api": "^0.5.0",
+    "@biomejs/js-api": "^0.6.0",
     "@biomejs/wasm-nodejs": "^1.7.3"
   }
 }
