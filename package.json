@@ -7,16 +7,16 @@
     "build:affected": "nx affected:build"
   },
   "devDependencies": {
-    "@biomejs/biome": "^1.7.3",
-    "@types/node": "^20.12.10",
-    "@types/react": "^18.3.1",
+    "@biomejs/biome": "^1.8.0",
+    "@types/node": "^20.14.2",
+    "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "git-cz": "^4.9.0",
-    "lefthook": "^1.6.10",
-    "nx": "^19.0.0",
-    "semantic-release": "^23.0.8",
+    "lefthook": "^1.6.15",
+    "nx": "^19.2.2",
+    "semantic-release": "^24.0.0",
     "typescript": "^5.4.5",
-    "vite": "^5.2.11",
+    "vite": "^5.2.13",
     "vitest": "^1.6.0"
   },
   "engines": {
