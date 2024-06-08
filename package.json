@@ -2,7 +2,7 @@
   "scripts": {
     "postinstall": "lefthook install",
     "commit": "git add -A && git-cz",
-    "lint": "biome check --apply packages",
+    "lint": "biome check --fix packages",
     "build:all": "nx run-many --target=build --all",
     "build:affected": "nx affected:build"
   },
