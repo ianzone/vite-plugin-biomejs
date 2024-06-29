@@ -26,4 +26,4 @@ pre-commit:
     biome:
       priority: 3
       glob: "*.{ts,tsx,js,jsx,json,jsonc,css}"
-      run: pnpm biome check --apply {staged_files}
+      run: pnpm biome check --fix {staged_files}
