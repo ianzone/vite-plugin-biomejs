@@ -8,7 +8,9 @@
     "url": "git+https://github.com/ianzone/vite-plugin-biomejs.git",
     "directory": "packages/vite-plugin-biomejs"
   },
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "exports": {
@@ -24,7 +26,7 @@
     "@biomejs/biome": "^1.8.3"
   },
   "devDependencies": {
-    "vite-plugin-inspect": "^0.8.4"
+    "vite-plugin-inspect": "^0.8.5"
   },
   "dependencies": {
     "@biomejs/js-api": "^0.6.2",
